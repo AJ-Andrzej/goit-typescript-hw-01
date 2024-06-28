@@ -1,9 +1,14 @@
 interface Details {
-    [key: string]: Date;
+    createAt: Date;
+    updateAt: Date;
 }
 
 interface Pages {
-    [key: string]: string | number | string[] | Details;
+    title: string;
+    likes: number;
+    accounts: string[];
+    status: string;
+    details?: Details;
 }
 
 
@@ -20,8 +25,8 @@ const page1: Pages = {
 }
 
 const page2: Pages = {
-  title: 'Python or Js',
-  likes: 5,
-  accounts: ['Alex'],
+    title: 'Python or Js',
+    likes: 5,
+    accounts: ['Alex'],
     status: 'close',
 }
